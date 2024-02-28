@@ -75,3 +75,30 @@ newtest = input()
 print(astartbend(newtest))
 
 
+def replacecolon(input_string):
+
+    result = input_string.replace(' ', ':')
+    result = result.replace(',', ':')
+    result = result.replace('.', ':')
+
+    return result
+
+
+input_text = input()
+print(replacecolon(input_text))
+
+
+def snaketocamel(snakestring):
+
+    words = snakestring.split('_')
+
+    camelwords = [words[0].lower()] + [word.capitalize() for word in words[1:]]
+    camelstring = ''.join(camelwords)
+
+    return camelstring
+
+
+input_text = input()
+print(snaketocamel(input_text))
+
+
